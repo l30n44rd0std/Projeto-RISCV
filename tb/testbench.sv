@@ -19,6 +19,10 @@ module testbench;
         clk = 0;
         reset = 1;
 
+        // 🔽 Dump de ondas
+        $dumpfile("waveforms/waves.vcd"); // arquivo será salvo na pasta waveforms/
+        $dumpvars(0, testbench);          // dump do escopo inteiro a partir de testbench
+
         // Reset por alguns ciclos
         #20;
         reset = 0;
